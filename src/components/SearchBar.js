@@ -24,6 +24,7 @@ function SearchBar() {
       </div>
       <div className="searchbar-profile">
         <img
+          alt="profile"
           src={
             "https://pbs.twimg.com/profile_images/1572696301606785025/0wQxF6xh_200x200.jpg"
           }
