@@ -5,9 +5,7 @@ function Main() {
   return (
     <div className="main">
       <SearchBar />
-      <div className="cover-bar">
-        <h1>cover</h1>
-      </div>
+      <div className="cover-bar">cover-bar</div>
       <div className="song-bar">
         <h1>song-bar</h1>
       </div>
