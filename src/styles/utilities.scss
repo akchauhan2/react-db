@@ -3,4 +3,7 @@
     .bg-#{$i} {
         background: color.mix(#fff, $bg, $i * 10);
     }
+    .color-#{$i} {
+        color: color.mix(#000, #fff, $i * 10);
+    }
 }

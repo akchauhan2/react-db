@@ -8,7 +8,8 @@ import {
 import { BiPodcast } from "react-icons/bi";
 import { CiSearch } from "react-icons/ci";
 import { RiArrowGoBackLine } from "react-icons/ri";
-import { AiOutlineLike } from "react-icons/ai";
+import { BsThreeDotsVertical, BsMusicNoteBeamed } from "react-icons/bs";
+import { AiFillHeart, AiOutlineLike } from "react-icons/ai";
 import { HiOutlineUser } from "react-icons/hi";
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -42,6 +43,12 @@ function Icons({ type, ...rest }) {
       return <CiSearch {...rest} />;
     case "notification":
       return <IoMdNotificationsOutline {...rest} />;
+    case "dots":
+      return <BsThreeDotsVertical {...rest} />;
+    case "music":
+      return <BsMusicNoteBeamed {...rest} />;
+    case "heart":
+      return <AiFillHeart {...rest} />;
     default:
       return null;
   }

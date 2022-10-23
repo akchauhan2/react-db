@@ -35,70 +35,6 @@ body,
     flex-grow: 0;
 }
 
-.main {
-    background: $bg-main;
-    flex: 1;
-    max-height: 100%;
-    overflow: auto;
-    padding: 10px 20px;
-    .search-bar {
-        gap: 0.75em;
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
-        .searchbar-notification {
-            display: flex;
-            align-items: center;
-            gap: 0.5em;
-            .searchbar-notification-icon {
-                font-size: 1.5em;
-            }
-        }
-        .searchbar-input {
-            background: $dark-shade-1;
-            display: flex;
-            align-items: center;
-            flex: 1;
-            gap: 2em;
-            padding: 8px 14px;
-            border-radius: 8px;
-            input {
-                flex: 1;
-                padding: 3px;
-                background: transparent;
-                border: none;
-                outline: none;
-                color: $color-shade;
-                font-size: 1em;
-            }
-        }
-        .searchbar-profile {
-            display: flex;
-            align-items: center;
-            gap: 1em;
-            max-height: 2em;
-            max-width: 2em;
-            img {
-                border-radius: 50%;
-                object-fit: contain;
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
-        .searchbar-select {
-            select {
-                background: $dark-shade-1;
-                color: $color-shade;
-                border: none;
-                outline: none;
-                padding: 8px 14px;
-                border-radius: 8px;
-                font-size: 1em;
-            }
-        }
-    }
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -209,12 +145,155 @@ h1 {
 
 .main {
     display: flex;
+    background: $bg-main;
     flex: 1;
-    flex-direction: column;
     max-height: 100%;
     overflow: auto;
+    padding: 10px 30px;
+    gap: 1em;
+    position: relative;
+    flex-direction: column;
+    .search-bar {
+        gap: 0.75em;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        .searchbar-notification {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            .searchbar-notification-icon {
+                font-size: 1.5em;
+            }
+        }
+        .searchbar-input {
+            background: $dark-shade-1;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 2em;
+            padding: 8px 14px;
+            border-radius: 8px;
+            input {
+                flex: 1;
+                padding: 3px;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: $color-shade;
+                font-size: 1em;
+            }
+        }
+        .searchbar-profile {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            max-height: 2em;
+            max-width: 2em;
+            img {
+                border-radius: 50%;
+                object-fit: contain;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .searchbar-select {
+            select {
+                background: $dark-shade-1;
+                color: $color-shade;
+                border: none;
+                outline: none;
+                padding: 8px 14px;
+                border-radius: 8px;
+                font-size: 1em;
+            }
+        }
+    }
     .cover-bar {
         flex: 1;
+        position: relative;
+        display: flex;
+        min-height: 250px;
+        z-index: 1;
+        min-width: 100px;
+        border-radius: 15px;
+        .coverbar-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: space-between;
+            .coverbar-content-header {
+                display: flex;
+                padding: 20px;
+                font-size: 1em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .coverbar-nav {
+                    font-size: 0.9em;
+                    font-weight: 500;
+                }
+            }
+            .coverbar-content-footer {
+                display: flex;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 1.5em 3em;
+                .coverbar-footer-details {
+                    flex: 2;
+                    .coverbar-heading {
+                        font-size: 0.8em;
+                        font-weight: 300;
+                        margin-bottom: 0.5em;
+                    }
+                    .coverbar-name {
+                        font-size: 2.5em;
+                        font-weight: 600;
+                        margin-bottom: 0.3em;
+                    }
+                    .coverbar-details {
+                        font-size: 0.75em;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        font-weight: 300;
+                        margin-bottom: 0.5em;
+                    }
+                }
+                .coverbar-footer-action {
+                    display: flex;
+                    justify-self: center;
+                    align-items: center;
+                    gap: 1em;
+                    .coverbar-listen-now {
+                        background: $btn;
+                        border: none;
+                        padding: 10px 15px;
+                        font-weight: 600;
+                        color: #fff;
+                        border-radius: 8px;
+                    }
+                    .coverbar-heart {
+                        border: 2px solid $white-color;
+                        padding: 5px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        .coverbar-bg {
+            border-radius: 15px;
+            background: url($image);
+            background-size: cover;
+            background-position: 10% 25%;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
     }
     .song-bar {
         flex: 2;

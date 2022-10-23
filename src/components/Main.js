@@ -1,16 +1,14 @@
 import React from "react";
+import CoverBar from "./CoverBar";
 import SearchBar from "./SearchBar";
+import SongBar from "./SongBar";
 
 function Main() {
   return (
     <div className="main">
       <SearchBar />
-      <div className="cover-bar">
-        <h1>cover-bar</h1>
-      </div>
-      <div className="song-bar">
-        <h1>song-bar</h1>
-      </div>
+      <CoverBar />
+      <SongBar />
     </div>
   );
 }
