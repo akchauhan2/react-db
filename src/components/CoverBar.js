@@ -37,7 +37,7 @@ function CoverBar() {
           </div>
         </div>
       </div>
-      <div className="coverbar-bg"></div>
+      <div className="coverbar-bg" />
     </div>
   );
 }

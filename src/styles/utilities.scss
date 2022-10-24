@@ -1,9 +1,28 @@
 @use "sass:color";
+$ultilites: ( "padding": ( "prefix": "p", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "padding-top": ( "prefix": "pt", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "padding-right": ( "prefix": "pr", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "padding-left": ( "prefix": "pl", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "padding-bottom": ( "prefix": "pb", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "margin": ( "prefix": "m", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "margin-top": ( "prefix": "mt", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "margin-right": ( "prefix": "mr", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "margin-left": ( "prefix": "ml", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), "margin-bottom": ( "prefix": "mb", "values": ( "0": 0, "1": 0.25rem, "2": 0.5rem, "3": 1rem, "4": 1.5rem, "5": 3rem, ), ), );
+@each $property,
+$map in $ultilites {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+    @each $k,
+    $v in $values {
+        .#{$prefix}-#{$k} {
+            #{$property}: $v;
+        }
+    }
+}
+
 @for $i from 0 through 10 {
+    //background
     .bg-#{$i} {
         background: color.mix(#fff, $bg, $i * 10);
     }
+    //font color
     .color-#{$i} {
         color: color.mix(#000, #fff, $i * 10);
+    }
+    //font size
+    .fs-#{$i} {
+        font-size: $i * 0.5em;
     }
 }
