@@ -11,7 +11,7 @@ function RecentSong() {
   const { tracks = { hits: [] }, artists } = useSelector(
     (state) => state.initial
   );
-
+  console.log(artists);
   const playthis = (track) => {
     dispatch(setPlaying(track));
   };
