@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital@1&family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
     box-sizing: border-box;
+    font-family: "Quicksand", Poppins, sans-serif;
 }
 
 html,
@@ -13,6 +14,7 @@ body,
     display: flex;
     flex-direction: column;
     flex: 1;
+    font-family: "Quicksand", Poppins, sans-serif;
 }
 
 .App {
@@ -22,7 +24,6 @@ body,
     width: 100%;
     overflow: hidden;
     color: $color-shade;
-    font-family: Poppins, sans-serif;
     // flex-direction: row-reverse;
 }
 
@@ -119,7 +120,7 @@ h1 {
         position: relative;
         display: flex;
         justify-content: center;
-        height: 90px;
+        height: 70px;
         align-items: center;
         .logo {
             position: relative;
@@ -128,7 +129,7 @@ h1 {
                 content: "";
                 position: absolute;
                 width: 10px;
-                height: 40px;
+                height: 35px;
                 top: calc(50% + 10px - 6px);
                 left: calc(50% - 6px);
                 background: $logo;
@@ -147,7 +148,7 @@ h1 {
     background: $bg-main;
     flex: 1;
     max-height: 100%;
-    overflow: auto;
+    overflow: hidden auto;
     padding: 10px 30px;
     gap: 1em;
     position: relative;
@@ -296,5 +297,47 @@ h1 {
     }
     .song-bar {
         flex: 2;
+        display: flex;
     }
+}
+
+.songs-recents {
+    flex: 3;
+    .RecentSongs {
+        .hit-tracks-cards {
+            display: flex;
+        }
+        .card.hit-tracks-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            justify-content: center;
+            .hit-tracks-img {
+                width: 100%;
+                flex: 1;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+.songs-lyrics {
+    flex: 1;
+    background: linear-gradient(#fe6f5e, #e74330);
+    color: $white-color;
+    padding: 1em 10px;
+    border-radius: 10px;
+}
+
+.PlayingArea {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+.w-100 {
+    width: 100%;
 }

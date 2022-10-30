@@ -10,7 +10,11 @@ function SearchBar() {
           style={{ fontSize: "1.3em", color: "#767879" }}
           className="sidebar-search-icon"
         />
-        <input type="text" placeholder="Search Artists, Songs, and albums" />
+        <input
+          className="fw-500"
+          type="text"
+          placeholder="Search Artists, Songs, and albums"
+        />
       </div>
       <div className="searchbar-notification">
         <Icons
